@@ -3,11 +3,14 @@ var pacientes = document.querySelectorAll(".paciente");
 var table = document.querySelector("table");
 
 table.addEventListener("dblclick", function(event){
-    var alvoEvento = event.target;
+    event.target.parentNode.classList.add("fadeOut");
 
-    var paiDoEvento = alvoEvento.parentNode;
+   
 
-    paiDoEvento.remove();
+    setTimeout(function(){
+        event.target.parentNode.remove();
+    },2000)
+
 
 
 })
